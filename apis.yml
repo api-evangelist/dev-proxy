@@ -5,8 +5,8 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Proxy
   - Debugging Proxy
+  - Proxy
 url: >-
   https://raw.githubusercontent.com/api-evangelist/dev-proxy/refs/heads/main/apis.yml
 created: '2026-03-27'
@@ -19,8 +19,8 @@ apis:
       Dev Proxy is a Microsoft command-line tool for simulating, testing, and debugging API interactions during development.
     humanURL: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/overview
     tags:
-      - Proxy
       - Debugging Proxy
+      - Proxy
     properties:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/
