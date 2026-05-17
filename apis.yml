@@ -24,14 +24,14 @@ apis:
     properties:
       - type: Documentation
         url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/
-      - type: Getting Started
+      - type: GettingStarted
         url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/get-started
 common:
   - type: Website
     url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/overview
   - type: Documentation
     url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/microsoft/dev-proxy
 maintainers:
   - FN: Kin Lane
