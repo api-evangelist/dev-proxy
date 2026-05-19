@@ -10,7 +10,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/dev-proxy/refs/heads/main/apis.yml
 created: '2026-03-27'
-modified: '2026-04-28'
+modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
   - aid: dev-proxy:dev-proxy
@@ -33,6 +33,9 @@ common:
     url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/
   - type: GitHubOrganization
     url: https://github.com/microsoft/dev-proxy
+  - name: Agent Skills
+    url: https://github.com/microsoft/win-dev-skills
+    type: AgentSkill
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
