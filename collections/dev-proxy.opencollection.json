@@ -1,0 +1,107 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Microsoft Dev Proxy — Proxy API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Proxy",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Dev Proxy state",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8897/proxy"
+          },
+          "docs": "Returns information about the currently running Dev Proxy instance."
+        },
+        {
+          "info": {
+            "name": "Control Dev Proxy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8897/proxy",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Start or stop request recording."
+        },
+        {
+          "info": {
+            "name": "Raise a mock request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8897/proxy/mockrequest"
+          },
+          "docs": "Equivalent of pressing `w` in the Dev Proxy console."
+        },
+        {
+          "info": {
+            "name": "Download Dev Proxy root certificate (PEM)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8897/proxy/rootCertificate",
+            "params": [
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Download Dev Proxy root certificate (PEM)"
+        },
+        {
+          "info": {
+            "name": "Gracefully shut down Dev Proxy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8897/proxy/stopproxy"
+          },
+          "docs": "Gracefully shut down Dev Proxy"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "JWT",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Generate a JWT",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8897/proxy/jwtToken",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Generate a JWT"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

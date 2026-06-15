@@ -1,0 +1,527 @@
+{
+  "item": [
+    {
+      "id": "e3e64b5d-60e3-4c70-a650-80fb3d22cb67",
+      "name": "Proxy",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b5e4e117-e027-4387-88b8-798efc8528d7",
+          "name": "Get Dev Proxy state",
+          "request": {
+            "name": "Get Dev Proxy state",
+            "description": {
+              "content": "Returns information about the currently running Dev Proxy instance.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "proxy"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7694c382-c275-4294-83db-2ee3b95a7cbf",
+              "name": "Proxy info",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "proxy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"recording\": false,\n  \"configFile\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "515ca520-266a-49a9-a89e-e604fe1f8fa5",
+          "name": "Control Dev Proxy",
+          "request": {
+            "name": "Control Dev Proxy",
+            "description": {
+              "content": "Start or stop request recording.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "proxy"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"recording\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "75a08a15-19d2-4f1b-ac72-6b01fd76f49d",
+              "name": "Updated proxy info",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "proxy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"recording\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"recording\": false,\n  \"configFile\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "050842ac-67fc-4909-beab-e431bd1da702",
+          "name": "Raise a mock request",
+          "request": {
+            "name": "Raise a mock request",
+            "description": {
+              "content": "Equivalent of pressing `w` in the Dev Proxy console.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "proxy",
+                "mockrequest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f09864f1-b139-4540-9b61-154f41cd18cb",
+              "name": "Mock request accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "proxy",
+                    "mockrequest"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Accepted",
+              "code": 202,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cbdd7692-e217-44a9-b62d-59668dc6b596",
+          "name": "Download Dev Proxy root certificate (PEM)",
+          "request": {
+            "name": "Download Dev Proxy root certificate (PEM)",
+            "description": {},
+            "url": {
+              "path": [
+                "proxy",
+                "rootCertificate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/x-x509-ca-cert"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0d9120d5-f408-416e-9e51-4028a7374682",
+              "name": "PEM-encoded root certificate",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "proxy",
+                    "rootCertificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/x-x509-ca-cert"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/x-x509-ca-cert"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ff2c4599-81c9-4ffa-9154-5f551b1b081a",
+              "name": "Unsupported format",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "proxy",
+                    "rootCertificate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "937d081c-a018-4865-87de-d870a0debc59",
+          "name": "Gracefully shut down Dev Proxy",
+          "request": {
+            "name": "Gracefully shut down Dev Proxy",
+            "description": {},
+            "url": {
+              "path": [
+                "proxy",
+                "stopproxy"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "861809b9-0f8e-4b97-af99-e241e66cf9b3",
+              "name": "Shutdown accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "proxy",
+                    "stopproxy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Accepted",
+              "code": 202,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "787627db-db27-4c54-9598-cedc395722bf",
+      "name": "JWT",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "37e185eb-d05c-4135-84d4-d23645e3db90",
+          "name": "Generate a JWT",
+          "request": {
+            "name": "Generate a JWT",
+            "description": {},
+            "url": {
+              "path": [
+                "proxy",
+                "jwtToken"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"audiences\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"issuer\": \"<string>\",\n  \"roles\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"scopes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"claims\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\"\n  },\n  \"validFor\": \"<integer>\",\n  \"signingKey\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "100d0cd8-ae34-4e20-8d2c-54700dbf834a",
+              "name": "JWT issued",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "proxy",
+                    "jwtToken"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"audiences\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"issuer\": \"<string>\",\n  \"roles\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"scopes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"claims\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\"\n  },\n  \"validFor\": \"<integer>\",\n  \"signingKey\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"token\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8897",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "444cc8d6-5815-4784-ba3b-1786a45706e5",
+    "name": "Microsoft Dev Proxy — Proxy API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Dev Proxy is a Microsoft command-line API simulator. While running, it exposes a\nlocal HTTP control API on a port configured in the proxy settings (default 8897)\nso callers can inspect proxy state, toggle recording, generate JWTs, raise mock\nrequests, fetch the root certificate, and shut the proxy down programmatically.\n\n\nContact Support:\n Name: Microsoft Dev Proxy",
+      "type": "text/plain"
+    }
+  }
+}
