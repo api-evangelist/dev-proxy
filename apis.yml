@@ -3,7 +3,7 @@ name: Dev Proxy
 description: >-
   Dev Proxy is a Microsoft command-line tool for simulating, testing, and debugging API interactions during development.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Debugging Proxy
   - Proxy
