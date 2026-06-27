@@ -35,7 +35,7 @@ common:
     url: https://github.com/microsoft/dev-proxy
   - name: Agent Skills
     url: https://github.com/microsoft/win-dev-skills
-    type: AgentSkill
+    type: AgentSkills
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
