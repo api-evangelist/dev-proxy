@@ -27,6 +27,10 @@ apis:
       - type: GettingStarted
         url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/get-started
 common:
+  - type: VulnerabilityDisclosure
+    url: security/dev-proxy-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/dev-proxy-domain-security.yml
   - type: Website
     url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/overview
   - type: Documentation
