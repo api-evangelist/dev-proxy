@@ -27,6 +27,8 @@ apis:
       - type: GettingStarted
         url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/get-started
 common:
+  - type: AgenticAccess
+    url: agentic-access/dev-proxy-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/dev-proxy-vulnerability-disclosure.yml
   - type: DomainSecurity
