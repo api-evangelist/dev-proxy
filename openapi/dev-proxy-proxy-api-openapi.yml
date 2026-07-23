@@ -1,37 +1,45 @@
 openapi: 3.1.0
 info:
-  title: Microsoft Dev Proxy — Proxy API
-  description: |
-    Dev Proxy is a Microsoft command-line API simulator. While running, it exposes a
+  title: Microsoft Dev — JWT Proxy API
+  description: 'Dev Proxy is a Microsoft command-line API simulator. While running, it exposes a
+
     local HTTP control API on a port configured in the proxy settings (default 8897)
+
     so callers can inspect proxy state, toggle recording, generate JWTs, raise mock
+
     requests, fetch the root certificate, and shut the proxy down programmatically.
-  version: "1.0.0"
+
+    '
+  version: 1.0.0
   contact:
     name: Microsoft Dev Proxy
     url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/
 servers:
-  - url: http://localhost:8897
-    description: Local Dev Proxy control plane (default port)
+- url: http://localhost:8897
+  description: Local Dev Proxy control plane (default port)
+tags:
+- name: Proxy
 paths:
   /proxy:
     get:
       summary: Get Dev Proxy state
       description: Returns information about the currently running Dev Proxy instance.
       operationId: getProxyInfo
-      tags: [Proxy]
+      tags:
+      - Proxy
       responses:
-        "200":
+        '200':
           description: Proxy info
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ProxyInfo"
+                $ref: '#/components/schemas/ProxyInfo'
     post:
       summary: Control Dev Proxy
       description: Start or stop request recording.
       operationId: setProxyState
-      tags: [Proxy]
+      tags:
+      - Proxy
       requestBody:
         required: true
         content:
@@ -42,67 +50,53 @@ paths:
                 recording:
                   type: boolean
       responses:
-        "200":
+        '200':
           description: Updated proxy info
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ProxyInfo"
-  /proxy/jwtToken:
-    post:
-      summary: Generate a JWT
-      operationId: generateJwt
-      tags: [JWT]
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/JwtOptions"
-      responses:
-        "200":
-          description: JWT issued
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/JwtInfo"
+                $ref: '#/components/schemas/ProxyInfo'
   /proxy/mockrequest:
     post:
       summary: Raise a mock request
       description: Equivalent of pressing `w` in the Dev Proxy console.
       operationId: raiseMockRequest
-      tags: [Proxy]
+      tags:
+      - Proxy
       responses:
-        "202":
+        '202':
           description: Mock request accepted
   /proxy/rootCertificate:
     get:
       summary: Download Dev Proxy root certificate (PEM)
       operationId: getRootCertificate
-      tags: [Proxy]
+      tags:
+      - Proxy
       parameters:
-        - name: format
-          in: query
-          required: true
-          schema:
-            type: string
-            enum: [crt]
+      - name: format
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - crt
       responses:
-        "200":
+        '200':
           description: PEM-encoded root certificate
           content:
             application/x-x509-ca-cert:
               schema:
                 type: string
-        "400":
+        '400':
           description: Unsupported format
   /proxy/stopproxy:
     post:
       summary: Gracefully shut down Dev Proxy
       operationId: stopProxy
-      tags: [Proxy]
+      tags:
+      - Proxy
       responses:
-        "202":
+        '202':
           description: Shutdown accepted
 components:
   schemas:
@@ -115,32 +109,3 @@ components:
         configFile:
           type: string
           description: Path to the configuration file (read-only)
-    JwtOptions:
-      type: object
-      properties:
-        name: { type: string, description: User name to mint the token for }
-        audiences:
-          type: array
-          items: { type: string }
-        issuer: { type: string }
-        roles:
-          type: array
-          items: { type: string }
-        scopes:
-          type: array
-          items: { type: string }
-        claims:
-          type: object
-          additionalProperties: { type: string }
-        validFor:
-          type: integer
-          description: Lifetime in minutes
-        signingKey:
-          type: string
-          description: At least 32 characters; random if omitted
-    JwtInfo:
-      type: object
-      properties:
-        token:
-          type: string
-          description: Signed JWT

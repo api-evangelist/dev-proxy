@@ -1,0 +1,79 @@
+openapi: 3.1.0
+info:
+  title: Microsoft Dev Proxy — Proxy JWT API
+  description: 'Dev Proxy is a Microsoft command-line API simulator. While running, it exposes a
+
+    local HTTP control API on a port configured in the proxy settings (default 8897)
+
+    so callers can inspect proxy state, toggle recording, generate JWTs, raise mock
+
+    requests, fetch the root certificate, and shut the proxy down programmatically.
+
+    '
+  version: 1.0.0
+  contact:
+    name: Microsoft Dev Proxy
+    url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/
+servers:
+- url: http://localhost:8897
+  description: Local Dev Proxy control plane (default port)
+tags:
+- name: JWT
+paths:
+  /proxy/jwtToken:
+    post:
+      summary: Generate a JWT
+      operationId: generateJwt
+      tags:
+      - JWT
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JwtOptions'
+      responses:
+        '200':
+          description: JWT issued
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JwtInfo'
+components:
+  schemas:
+    JwtInfo:
+      type: object
+      properties:
+        token:
+          type: string
+          description: Signed JWT
+    JwtOptions:
+      type: object
+      properties:
+        name:
+          type: string
+          description: User name to mint the token for
+        audiences:
+          type: array
+          items:
+            type: string
+        issuer:
+          type: string
+        roles:
+          type: array
+          items:
+            type: string
+        scopes:
+          type: array
+          items:
+            type: string
+        claims:
+          type: object
+          additionalProperties:
+            type: string
+        validFor:
+          type: integer
+          description: Lifetime in minutes
+        signingKey:
+          type: string
+          description: At least 32 characters; random if omitted
