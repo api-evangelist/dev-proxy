@@ -3,7 +3,19 @@ name: Dev Proxy
 description: >-
   Dev Proxy is a Microsoft command-line tool for simulating, testing, and debugging API interactions during development.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dev-proxy.png
 tags:
   - Debugging Proxy
   - Proxy
@@ -13,19 +25,38 @@ created: '2026-03-27'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: dev-proxy:dev-proxy
-    name: Dev Proxy
-    description: >-
-      Dev Proxy is a Microsoft command-line tool for simulating, testing, and debugging API interactions during development.
-    humanURL: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/overview
-    tags:
-      - Debugging Proxy
-      - Proxy
-    properties:
-      - type: Documentation
-        url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/
-      - type: GettingStarted
-        url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/get-started
+- aid: dev-proxy:dev-proxy
+  name: Dev Proxy
+  description: >-
+    Dev Proxy is a Microsoft command-line tool for simulating, testing, and debugging API interactions
+    during development.
+  humanURL: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/overview
+  tags:
+  - Debugging Proxy
+  - Proxy
+  properties:
+  - type: Documentation
+    url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/
+  - type: GettingStarted
+    url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/get-started
+- aid: dev-proxy:dev-proxy-jwt-api
+  name: Dev Proxy JWT API
+  description: The JWT API from Dev Proxy — 1 operation(s) for jwt.
+  humanURL: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/overview
+  tags:
+  - JWT
+  properties:
+  - type: OpenAPI
+    url: openapi/dev-proxy-jwt-api-openapi.yml
+- aid: dev-proxy:dev-proxy-proxy-api
+  name: Dev Proxy Proxy API
+  description: The Proxy API from Dev Proxy — 4 operation(s) for proxy.
+  humanURL: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/overview
+  tags:
+  - Proxy
+  properties:
+  - type: OpenAPI
+    url: openapi/dev-proxy-proxy-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/dev-proxy-agentic-access.yml
