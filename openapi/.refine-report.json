@@ -1,0 +1,16 @@
+{
+  "provider": "dev-proxy",
+  "sources": [
+    "dev-proxy-jwt-api-openapi.yml",
+    "dev-proxy-proxy-api-openapi.yml"
+  ],
+  "outputs": [
+    "dev-proxy-jwt-api-openapi.yml",
+    "dev-proxy-proxy-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
