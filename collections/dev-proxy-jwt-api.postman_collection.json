@@ -1,0 +1,122 @@
+{
+  "item": [
+    {
+      "id": "d14fadec-84db-485c-beb1-8fad0ad9d2b9",
+      "name": "JWT",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "71a60646-8639-46fe-9a52-693ba6390d94",
+          "name": "Generate a JWT",
+          "request": {
+            "name": "Generate a JWT",
+            "description": {},
+            "url": {
+              "path": [
+                "proxy",
+                "jwtToken"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"audiences\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"issuer\": \"<string>\",\n  \"roles\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"scopes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"claims\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\"\n  },\n  \"validFor\": \"<integer>\",\n  \"signingKey\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "87e31341-3b35-42a4-ae94-fde266c7414e",
+              "name": "JWT issued",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "proxy",
+                    "jwtToken"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"audiences\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"issuer\": \"<string>\",\n  \"roles\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"scopes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"claims\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\"\n  },\n  \"validFor\": \"<integer>\",\n  \"signingKey\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"token\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8897",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "74f7476c-38bb-49ec-a7b5-e37f8c23500b",
+    "name": "Microsoft Dev Proxy — Proxy JWT API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Dev Proxy is a Microsoft command-line API simulator. While running, it exposes a\nlocal HTTP control API on a port configured in the proxy settings (default 8897)\nso callers can inspect proxy state, toggle recording, generate JWTs, raise mock\nrequests, fetch the root certificate, and shut the proxy down programmatically.\n\n\nContact Support:\n Name: Microsoft Dev Proxy",
+      "type": "text/plain"
+    }
+  }
+}

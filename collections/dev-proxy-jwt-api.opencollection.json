@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Microsoft Dev Proxy — Proxy JWT API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "JWT",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Generate a JWT",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8897/proxy/jwtToken",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Generate a JWT"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
