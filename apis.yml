@@ -1,7 +1,7 @@
 aid: dev-proxy
 name: Dev Proxy
-description: >-
-  Dev Proxy is a Microsoft command-line tool for simulating, testing, and debugging API interactions during development.
+description: Dev Proxy is a Microsoft command-line tool for simulating, testing, and debugging API interactions
+  during development.
 type: Index
 deliveryModel:
   model: unknown
@@ -28,18 +28,16 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dev-proxy.png
 tags:
-  - Debugging Proxy
-  - Proxy
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/dev-proxy/refs/heads/main/apis.yml
+- Debugging Proxy
+- Proxy
+url: https://raw.githubusercontent.com/api-evangelist/dev-proxy/refs/heads/main/apis.yml
 created: '2026-03-27'
-modified: '2026-05-19'
+modified: '2026-09-16'
 specificationVersion: '0.23'
 apis:
 - aid: dev-proxy:dev-proxy
   name: Dev Proxy
-  description: >-
-    Dev Proxy is a Microsoft command-line tool for simulating, testing, and debugging API interactions
+  description: Dev Proxy is a Microsoft command-line tool for simulating, testing, and debugging API interactions
     during development.
   humanURL: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/overview
   tags:
@@ -60,7 +58,7 @@ apis:
   - type: OpenAPI
     url: openapi/dev-proxy-jwt-api-openapi.yml
 - aid: dev-proxy:dev-proxy-proxy-api
-  name: Dev Proxy Proxy API
+  name: Dev Proxy API
   description: The Proxy API from Dev Proxy — 4 operation(s) for proxy.
   humanURL: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/overview
   tags:
@@ -69,21 +67,21 @@ apis:
   - type: OpenAPI
     url: openapi/dev-proxy-proxy-api-openapi.yml
 common:
-  - type: AgenticAccess
-    url: agentic-access/dev-proxy-agentic-access.yml
-  - type: VulnerabilityDisclosure
-    url: security/dev-proxy-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/dev-proxy-domain-security.yml
-  - type: Website
-    url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/overview
-  - type: Documentation
-    url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/
-  - type: GitHubOrganization
-    url: https://github.com/microsoft/dev-proxy
-  - name: Agent Skills
-    url: https://github.com/microsoft/win-dev-skills
-    type: AgentSkills
+- type: AgenticAccess
+  url: agentic-access/dev-proxy-agentic-access.yml
+- type: VulnerabilityDisclosure
+  url: security/dev-proxy-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/dev-proxy-domain-security.yml
+- type: Website
+  url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/overview
+- type: Documentation
+  url: https://learn.microsoft.com/en-us/microsoft-cloud/dev/dev-proxy/
+- type: GitHubOrganization
+  url: https://github.com/microsoft/dev-proxy
+- name: Agent Skills
+  url: https://github.com/microsoft/win-dev-skills
+  type: AgentSkills
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
