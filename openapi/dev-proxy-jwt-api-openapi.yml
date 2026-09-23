@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Microsoft Dev Proxy — Proxy JWT API
   description: 'Dev Proxy is a Microsoft command-line API simulator. While running, it exposes a
@@ -7,9 +7,7 @@ info:
 
     so callers can inspect proxy state, toggle recording, generate JWTs, raise mock
 
-    requests, fetch the root certificate, and shut the proxy down programmatically.
-
-    '
+    requests, fetch the root certificate, and shut the proxy down programmatically.'
   version: 1.0.0
   contact:
     name: Microsoft Dev Proxy
