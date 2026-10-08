@@ -67,6 +67,12 @@ apis:
   - type: OpenAPI
     url: openapi/dev-proxy-proxy-api-openapi.yml
 common:
+- type: Plans
+  url: plans/dev-proxy-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/dev-proxy-rate-limits.yml
+- type: FinOps
+  url: finops/dev-proxy-finops.yml
 - type: AgenticAccess
   url: agentic-access/dev-proxy-agentic-access.yml
 - type: VulnerabilityDisclosure
