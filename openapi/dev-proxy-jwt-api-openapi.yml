@@ -39,12 +39,6 @@ paths:
                 $ref: '#/components/schemas/JwtInfo'
 components:
   schemas:
-    JwtInfo:
-      type: object
-      properties:
-        token:
-          type: string
-          description: Signed JWT
     JwtOptions:
       type: object
       properties:
@@ -75,3 +69,9 @@ components:
         signingKey:
           type: string
           description: At least 32 characters; random if omitted
+    JwtInfo:
+      type: object
+      properties:
+        token:
+          type: string
+          description: Signed JWT
